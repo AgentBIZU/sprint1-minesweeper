@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(gray, gray) ;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mineBoard {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.cell {
+    background: linear-gradient(45deg, gray, lightgray);
+    height: 35px;
+    width: 35px;
+    border: 1px solid black;
+    margin: 50px;
+    padding: 5px;
+    opacity: 0.85;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.openedCell {
+    background: linear-gradient(45deg, rgb(182, 199, 198), white);
+}
+
+.cell:hover {
+    opacity: 1;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.24), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hide {
+    display: none;
+}
+
+.timerModal {
+    font-size: 13px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    animation: timerModal 1.5s linear infinite;
+    border-radius: 25px;
+    background-color: yellow;
+}
+
+@keyframes timerModal {
+    0%, 100% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 1px 0 rgb(0, 0, 0), 0 0 20px 5px black;
+    }
+}
+
+.animationOff {
+    animation: none;
+}
+
+.timerTitle {
+    padding: 10px 5px 0px 5px;
+}
+
+.timer {
+    padding-bottom: 10px;
+}
+
+.noPointerEvents {
+    pointer-events: none;
+}
+
+.flagMarks, .openedCellsShow, .livesShow {
+    display: inline-block;
+    margin: 10px;
+    font-size: x-large;
+}
+
+.timerModal:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.24), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.levelButton {
+    width: 65px;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    padding: 3px;
+}
+
+.buttonImg {
+    height: 100%;
+}
+
+.victoryImg {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
